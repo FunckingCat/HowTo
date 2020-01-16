@@ -1,0 +1,23 @@
+Дамп базы:
+
+        sudo su - postgres
+        rm databasename.sql
+        pg_dump databasename > databasename.sql
+
+    Ctrl + D что бы выйти
+
+        rm ~/databasename.sql
+        cp /var/lib/postgresql/databasename.sql ~
+
+Дамп есть теперь скидываем куда надо
+
+    Восстановление базы:
+
+        sudo su - postgres
+        psql
+        DROP DATABASE databasename; *точка с запятой!*
+        CREATE DATABASE databasename
+
+    Ctrl + D что бы выйти
+
+        psql databasename < /home/user_name/basename.sql
